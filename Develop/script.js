@@ -3,6 +3,8 @@
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+
+
 // var specialCharacters = (" !"#$%&;()*+,-./:;<=>?@[\]^_`{|}~").split'')
 
 let upperCaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -16,14 +18,7 @@ let finalPassword = [];
 
 function generatePassword(){
 
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-
-  //prompt to confirm password length
+//prompt to confirm password length
 let passwordLength = prompt("How many characters would you like in your password between 8 and 128?") 
 //prompt to confirm uppercase letters
 let confirmUpperCase = confirm("Do you want uppercase letters in your password?") 
@@ -55,18 +50,16 @@ let confirmSpecialCharacters = confirm("Do you want special characters in your p
   }
 
   return finalPassword.join("");
+}
 
-
-  // if(password.includes(specialCharacters)){
-  //   console.log("Email is valid");
-  // }
-  // else{
-  //   console.log("Email is not valid");
-  // }
-
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-}
+
