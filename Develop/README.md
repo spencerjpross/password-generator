@@ -13,3 +13,4 @@ Started with starter code and worked specifically on the Javascript with this pr
 
 Created some if statements as well as concatenated multiple arrays to create the final password.
 
+Live URL:  https://spencerjpross.github.io/password-generator/
